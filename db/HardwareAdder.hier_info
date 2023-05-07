@@ -1,0 +1,225 @@
+|HardwareAdder
+cin => cin.IN1
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+b[2] => b[2].IN2
+b[3] => b[3].IN2
+sum[0] << sum[0].DB_MAX_OUTPUT_PORT_TYPE
+sum[1] << sum[1].DB_MAX_OUTPUT_PORT_TYPE
+sum[2] << sum[2].DB_MAX_OUTPUT_PORT_TYPE
+sum[3] << sum[3].DB_MAX_OUTPUT_PORT_TYPE
+cout << Adder4Bit:Adder4Bit0.cout
+HEX0[0] << HexTo7Segment:sum_to_7seg.Seg
+HEX0[1] << HexTo7Segment:sum_to_7seg.Seg
+HEX0[2] << HexTo7Segment:sum_to_7seg.Seg
+HEX0[3] << HexTo7Segment:sum_to_7seg.Seg
+HEX0[4] << HexTo7Segment:sum_to_7seg.Seg
+HEX0[5] << HexTo7Segment:sum_to_7seg.Seg
+HEX0[6] << HexTo7Segment:sum_to_7seg.Seg
+HEX4[0] << HexTo7Segment:b_hex_to_7seg.Seg
+HEX4[1] << HexTo7Segment:b_hex_to_7seg.Seg
+HEX4[2] << HexTo7Segment:b_hex_to_7seg.Seg
+HEX4[3] << HexTo7Segment:b_hex_to_7seg.Seg
+HEX4[4] << HexTo7Segment:b_hex_to_7seg.Seg
+HEX4[5] << HexTo7Segment:b_hex_to_7seg.Seg
+HEX4[6] << HexTo7Segment:b_hex_to_7seg.Seg
+HEX5[0] << HexTo7Segment:a_hex_to_7seg.Seg
+HEX5[1] << HexTo7Segment:a_hex_to_7seg.Seg
+HEX5[2] << HexTo7Segment:a_hex_to_7seg.Seg
+HEX5[3] << HexTo7Segment:a_hex_to_7seg.Seg
+HEX5[4] << HexTo7Segment:a_hex_to_7seg.Seg
+HEX5[5] << HexTo7Segment:a_hex_to_7seg.Seg
+HEX5[6] << HexTo7Segment:a_hex_to_7seg.Seg
+
+
+|HardwareAdder|Adder4Bit:Adder4Bit0
+cin => cin.IN1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+sum[0] <= Adder1Bit:bit0.sum
+sum[1] <= Adder1Bit:bit1.sum
+sum[2] <= Adder1Bit:bit2.sum
+sum[3] <= Adder1Bit:bit3.sum
+cout <= Adder1Bit:bit3.cout
+
+
+|HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit0
+a => link1.IN0
+a => link2.IN0
+b => link1.IN1
+b => link2.IN1
+cin => comb.IN1
+cin => link3.IN1
+cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit1
+a => link1.IN0
+a => link2.IN0
+b => link1.IN1
+b => link2.IN1
+cin => comb.IN1
+cin => link3.IN1
+cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit2
+a => link1.IN0
+a => link2.IN0
+b => link1.IN1
+b => link2.IN1
+cin => comb.IN1
+cin => link3.IN1
+cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit3
+a => link1.IN0
+a => link2.IN0
+b => link1.IN1
+b => link2.IN1
+cin => comb.IN1
+cin => link3.IN1
+cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HardwareAdder|HexTo7Segment:a_hex_to_7seg
+Hex[0] => Mux0.IN19
+Hex[0] => Mux1.IN19
+Hex[0] => Mux2.IN19
+Hex[0] => Mux3.IN19
+Hex[0] => Mux4.IN19
+Hex[0] => Mux5.IN19
+Hex[0] => Mux6.IN19
+Hex[0] => Mux7.IN19
+Hex[1] => Mux0.IN18
+Hex[1] => Mux1.IN18
+Hex[1] => Mux2.IN18
+Hex[1] => Mux3.IN18
+Hex[1] => Mux4.IN18
+Hex[1] => Mux5.IN18
+Hex[1] => Mux6.IN18
+Hex[1] => Mux7.IN18
+Hex[2] => Mux0.IN17
+Hex[2] => Mux1.IN17
+Hex[2] => Mux2.IN17
+Hex[2] => Mux3.IN17
+Hex[2] => Mux4.IN17
+Hex[2] => Mux5.IN17
+Hex[2] => Mux6.IN17
+Hex[2] => Mux7.IN17
+Hex[3] => Mux0.IN16
+Hex[3] => Mux1.IN16
+Hex[3] => Mux2.IN16
+Hex[3] => Mux3.IN16
+Hex[3] => Mux4.IN16
+Hex[3] => Mux5.IN16
+Hex[3] => Mux6.IN16
+Hex[3] => Mux7.IN16
+Seg[0] <= Seg[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Seg[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= Seg[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= Seg[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= Seg[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= Seg[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HardwareAdder|HexTo7Segment:b_hex_to_7seg
+Hex[0] => Mux0.IN19
+Hex[0] => Mux1.IN19
+Hex[0] => Mux2.IN19
+Hex[0] => Mux3.IN19
+Hex[0] => Mux4.IN19
+Hex[0] => Mux5.IN19
+Hex[0] => Mux6.IN19
+Hex[0] => Mux7.IN19
+Hex[1] => Mux0.IN18
+Hex[1] => Mux1.IN18
+Hex[1] => Mux2.IN18
+Hex[1] => Mux3.IN18
+Hex[1] => Mux4.IN18
+Hex[1] => Mux5.IN18
+Hex[1] => Mux6.IN18
+Hex[1] => Mux7.IN18
+Hex[2] => Mux0.IN17
+Hex[2] => Mux1.IN17
+Hex[2] => Mux2.IN17
+Hex[2] => Mux3.IN17
+Hex[2] => Mux4.IN17
+Hex[2] => Mux5.IN17
+Hex[2] => Mux6.IN17
+Hex[2] => Mux7.IN17
+Hex[3] => Mux0.IN16
+Hex[3] => Mux1.IN16
+Hex[3] => Mux2.IN16
+Hex[3] => Mux3.IN16
+Hex[3] => Mux4.IN16
+Hex[3] => Mux5.IN16
+Hex[3] => Mux6.IN16
+Hex[3] => Mux7.IN16
+Seg[0] <= Seg[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Seg[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= Seg[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= Seg[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= Seg[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= Seg[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HardwareAdder|HexTo7Segment:sum_to_7seg
+Hex[0] => Mux0.IN19
+Hex[0] => Mux1.IN19
+Hex[0] => Mux2.IN19
+Hex[0] => Mux3.IN19
+Hex[0] => Mux4.IN19
+Hex[0] => Mux5.IN19
+Hex[0] => Mux6.IN19
+Hex[0] => Mux7.IN19
+Hex[1] => Mux0.IN18
+Hex[1] => Mux1.IN18
+Hex[1] => Mux2.IN18
+Hex[1] => Mux3.IN18
+Hex[1] => Mux4.IN18
+Hex[1] => Mux5.IN18
+Hex[1] => Mux6.IN18
+Hex[1] => Mux7.IN18
+Hex[2] => Mux0.IN17
+Hex[2] => Mux1.IN17
+Hex[2] => Mux2.IN17
+Hex[2] => Mux3.IN17
+Hex[2] => Mux4.IN17
+Hex[2] => Mux5.IN17
+Hex[2] => Mux6.IN17
+Hex[2] => Mux7.IN17
+Hex[3] => Mux0.IN16
+Hex[3] => Mux1.IN16
+Hex[3] => Mux2.IN16
+Hex[3] => Mux3.IN16
+Hex[3] => Mux4.IN16
+Hex[3] => Mux5.IN16
+Hex[3] => Mux6.IN16
+Hex[3] => Mux7.IN16
+Seg[0] <= Seg[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Seg[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= Seg[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= Seg[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= Seg[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= Seg[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
