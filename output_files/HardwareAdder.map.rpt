@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HardwareAdder
-Sun May 07 02:38:14 2023
+Sun May 07 19:16:27 2023
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -15,12 +15,9 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: HexTo7Segment:a_hex_to_7seg
- 11. Parameter Settings for User Entity Instance: HexTo7Segment:b_hex_to_7seg
- 12. Parameter Settings for User Entity Instance: HexTo7Segment:sum_to_7seg
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -46,14 +43,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 07 02:38:14 2023       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 07 19:16:27 2023       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; HardwareAdder                               ;
 ; Top-level Entity Name           ; HardwareAdder                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 35                                          ;
+; Total pins                      ; 41                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -176,85 +173,63 @@ refer to the applicable agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                        ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
 ; HexTo7Segment.v                  ; yes             ; User Verilog HDL File  ; E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v ;         ;
-; Adder4Bit.v                      ; yes             ; User Verilog HDL File  ; E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder4Bit.v     ;         ;
-; Adder1Bit.v                      ; yes             ; User Verilog HDL File  ; E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v     ;         ;
 ; HardwareAdder.v                  ; yes             ; User Verilog HDL File  ; E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 20         ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 39         ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 0          ;
-;     -- 5 input functions                    ; 4          ;
-;     -- 4 input functions                    ; 12         ;
-;     -- <=3 input functions                  ; 23         ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 35         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; a[0]~input ;
-; Maximum fan-out                             ; 8          ;
-; Total fan-out                               ; 198        ;
-; Average fan-out                             ; 1.82       ;
-+---------------------------------------------+------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 6            ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 11           ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 0            ;
+;     -- 5 input functions                    ; 0            ;
+;     -- 4 input functions                    ; 7            ;
+;     -- <=3 input functions                  ; 4            ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 41           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; Hex[0]~input ;
+; Maximum fan-out                             ; 7            ;
+; Total fan-out                               ; 94           ;
+; Average fan-out                             ; 1.01         ;
++---------------------------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name   ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+---------------+--------------+
-; |HardwareAdder                   ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 35   ; 0            ; |HardwareAdder                                     ; HardwareAdder ; work         ;
-;    |Adder4Bit:Adder4Bit0|        ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|Adder4Bit:Adder4Bit0                ; Adder4Bit     ; work         ;
-;       |Adder1Bit:bit0|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit0 ; Adder1Bit     ; work         ;
-;       |Adder1Bit:bit1|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit1 ; Adder1Bit     ; work         ;
-;       |Adder1Bit:bit2|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit2 ; Adder1Bit     ; work         ;
-;       |Adder1Bit:bit3|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|Adder4Bit:Adder4Bit0|Adder1Bit:bit3 ; Adder1Bit     ; work         ;
-;    |HexTo7Segment:a_hex_to_7seg| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|HexTo7Segment:a_hex_to_7seg         ; HexTo7Segment ; work         ;
-;    |HexTo7Segment:b_hex_to_7seg| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|HexTo7Segment:b_hex_to_7seg         ; HexTo7Segment ; work         ;
-;    |HexTo7Segment:sum_to_7seg|   ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|HexTo7Segment:sum_to_7seg           ; HexTo7Segment ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
+; |HardwareAdder             ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 41   ; 0            ; |HardwareAdder                  ; HardwareAdder ; work         ;
+;    |HexTo7Segment:D1|      ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |HardwareAdder|HexTo7Segment:D1 ; HexTo7Segment ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                             ;
-+-----------------------------------------------------+----------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal              ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------------+------------------------+
-; HexTo7Segment:sum_to_7seg|Seg[0]                    ; HexTo7Segment:sum_to_7seg|Mux7   ; yes                    ;
-; HexTo7Segment:sum_to_7seg|Seg[1]                    ; HexTo7Segment:sum_to_7seg|Mux7   ; yes                    ;
-; HexTo7Segment:sum_to_7seg|Seg[2]                    ; HexTo7Segment:sum_to_7seg|Mux7   ; yes                    ;
-; HexTo7Segment:sum_to_7seg|Seg[3]                    ; HexTo7Segment:sum_to_7seg|Mux7   ; yes                    ;
-; HexTo7Segment:sum_to_7seg|Seg[4]                    ; HexTo7Segment:sum_to_7seg|Mux7   ; yes                    ;
-; HexTo7Segment:sum_to_7seg|Seg[5]                    ; HexTo7Segment:sum_to_7seg|Mux7   ; yes                    ;
-; HexTo7Segment:sum_to_7seg|Seg[6]                    ; HexTo7Segment:sum_to_7seg|Mux7   ; yes                    ;
-; HexTo7Segment:b_hex_to_7seg|Seg[0]                  ; HexTo7Segment:b_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:b_hex_to_7seg|Seg[1]                  ; HexTo7Segment:b_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:b_hex_to_7seg|Seg[2]                  ; HexTo7Segment:b_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:b_hex_to_7seg|Seg[3]                  ; HexTo7Segment:b_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:b_hex_to_7seg|Seg[4]                  ; HexTo7Segment:b_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:b_hex_to_7seg|Seg[5]                  ; HexTo7Segment:b_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:b_hex_to_7seg|Seg[6]                  ; HexTo7Segment:b_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:a_hex_to_7seg|Seg[0]                  ; HexTo7Segment:a_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:a_hex_to_7seg|Seg[1]                  ; HexTo7Segment:a_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:a_hex_to_7seg|Seg[2]                  ; HexTo7Segment:a_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:a_hex_to_7seg|Seg[3]                  ; HexTo7Segment:a_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:a_hex_to_7seg|Seg[4]                  ; HexTo7Segment:a_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:a_hex_to_7seg|Seg[5]                  ; HexTo7Segment:a_hex_to_7seg|Mux7 ; yes                    ;
-; HexTo7Segment:a_hex_to_7seg|Seg[6]                  ; HexTo7Segment:a_hex_to_7seg|Mux7 ; yes                    ;
-; Number of user-specified and inferred latches = 21  ;                                  ;                        ;
-+-----------------------------------------------------+----------------------------------+------------------------+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal   ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------+------------------------+
+; HexTo7Segment:D1|HEX5[6]                           ; HexTo7Segment:D1|Mux3 ; yes                    ;
+; HexTo7Segment:D1|HEX4[0]                           ; HexTo7Segment:D1|Mux3 ; yes                    ;
+; HexTo7Segment:D1|HEX4[3]                           ; HexTo7Segment:D1|Mux3 ; yes                    ;
+; HexTo7Segment:D1|HEX4[6]                           ; HexTo7Segment:D1|Mux3 ; yes                    ;
+; HexTo7Segment:D1|HEX3[0]                           ; HexTo7Segment:D1|Mux1 ; yes                    ;
+; HexTo7Segment:D1|HEX3[3]                           ; HexTo7Segment:D1|Mux1 ; yes                    ;
+; HexTo7Segment:D1|HEX3[6]                           ; HexTo7Segment:D1|Mux1 ; yes                    ;
+; HexTo7Segment:D1|HEX2[6]                           ; HexTo7Segment:D1|Mux1 ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                       ;                        ;
++----------------------------------------------------+-----------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -273,50 +248,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: HexTo7Segment:a_hex_to_7seg ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; INVERT_OUTPUT  ; 0     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: HexTo7Segment:b_hex_to_7seg ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; INVERT_OUTPUT  ; 0     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: HexTo7Segment:sum_to_7seg ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; INVERT_OUTPUT  ; 0     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 39                          ;
-;     normal            ; 39                          ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 12                          ;
-;         5 data inputs ; 4                           ;
-; boundary_port         ; 35                          ;
+; arriav_lcell_comb     ; 13                          ;
+;     normal            ; 13                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 7                           ;
+; boundary_port         ; 41                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.33                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -335,38 +282,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun May 07 02:38:05 2023
+    Info: Processing started: Sun May 07 19:16:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HardwareAdder -c HardwareAdder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(12): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 12
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(14): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 14
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(15): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 15
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(16): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 16
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(17): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 17
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(18): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 18
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(20): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 20
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(21): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 21
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(22): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 22
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(23): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 23
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(24): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 24
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(25): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 25
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(26): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 26
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(27): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 27
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(30): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 30
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(32): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 32
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(33): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 33
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(34): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 34
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(35): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 35
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(36): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 36
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(38): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 38
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(39): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 39
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(40): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 40
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(41): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 41
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(42): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 42
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(43): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 43
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(44): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 44
-Warning (10229): Verilog HDL Expression warning at HexTo7Segment.v(45): truncated literal to match 4 bits File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file hexto7segment.v
     Info (12023): Found entity 1: HexTo7Segment File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder4bit.v
@@ -374,79 +293,83 @@ Info (12021): Found 1 design units, including 1 entities, in source file adder4b
 Info (12021): Found 1 design units, including 1 entities, in source file adder1bit.v
     Info (12023): Found entity 1: Adder1Bit File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hardwareadder.v
-    Info (12023): Found entity 1: HardwareAdder File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 1
+    Info (12023): Found entity 1: HardwareAdder File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 2
 Info (12127): Elaborating entity "HardwareAdder" for the top level hierarchy
-Info (12128): Elaborating entity "Adder4Bit" for hierarchy "Adder4Bit:Adder4Bit0" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 25
-Info (12128): Elaborating entity "Adder1Bit" for hierarchy "Adder4Bit:Adder4Bit0|Adder1Bit:bit0" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder4Bit.v Line: 27
-Info (12128): Elaborating entity "HexTo7Segment" for hierarchy "HexTo7Segment:a_hex_to_7seg" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 32
-Warning (10272): Verilog HDL Case Statement warning at HexTo7Segment.v(15): case item expression covers a value already covered by a previous case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 15
-Warning (10272): Verilog HDL Case Statement warning at HexTo7Segment.v(16): case item expression covers a value already covered by a previous case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 16
-Warning (10272): Verilog HDL Case Statement warning at HexTo7Segment.v(18): case item expression covers a value already covered by a previous case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 18
-Warning (10272): Verilog HDL Case Statement warning at HexTo7Segment.v(20): case item expression covers a value already covered by a previous case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 20
-Warning (10272): Verilog HDL Case Statement warning at HexTo7Segment.v(21): case item expression covers a value already covered by a previous case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 21
-Warning (10272): Verilog HDL Case Statement warning at HexTo7Segment.v(22): case item expression covers a value already covered by a previous case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 22
-Warning (10272): Verilog HDL Case Statement warning at HexTo7Segment.v(26): case item expression covers a value already covered by a previous case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 26
-Warning (10270): Verilog HDL Case Statement warning at HexTo7Segment.v(11): incomplete case statement has no default case item File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 11
-Warning (10240): Verilog HDL Always Construct warning at HexTo7Segment.v(9): inferring latch(es) for variable "Seg", which holds its previous value in one or more paths through the always construct File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Info (10041): Inferred latch for "Seg[0]" at HexTo7Segment.v(9) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Info (10041): Inferred latch for "Seg[1]" at HexTo7Segment.v(9) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Info (10041): Inferred latch for "Seg[2]" at HexTo7Segment.v(9) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Info (10041): Inferred latch for "Seg[3]" at HexTo7Segment.v(9) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Info (10041): Inferred latch for "Seg[4]" at HexTo7Segment.v(9) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Info (10041): Inferred latch for "Seg[5]" at HexTo7Segment.v(9) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Info (10041): Inferred latch for "Seg[6]" at HexTo7Segment.v(9) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-Warning (13012): Latch HexTo7Segment:sum_to_7seg|Seg[0] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Adder4Bit:Adder4Bit0|Adder1Bit:bit0|sum File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 10
-Warning (13012): Latch HexTo7Segment:sum_to_7seg|Seg[1] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Adder4Bit:Adder4Bit0|Adder1Bit:bit1|sum File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 10
-Warning (13012): Latch HexTo7Segment:sum_to_7seg|Seg[2] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Adder4Bit:Adder4Bit0|Adder1Bit:bit2|sum File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 10
-Warning (13012): Latch HexTo7Segment:sum_to_7seg|Seg[3] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Adder4Bit:Adder4Bit0|Adder1Bit:bit3|sum File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 10
-Warning (13012): Latch HexTo7Segment:sum_to_7seg|Seg[4] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Adder4Bit:Adder4Bit0|Adder1Bit:bit0|sum File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 10
-Warning (13012): Latch HexTo7Segment:sum_to_7seg|Seg[5] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Adder4Bit:Adder4Bit0|Adder1Bit:bit0|sum File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 10
-Warning (13012): Latch HexTo7Segment:sum_to_7seg|Seg[6] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Adder4Bit:Adder4Bit0|Adder1Bit:bit0|sum File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/Adder1Bit.v Line: 10
-Warning (13012): Latch HexTo7Segment:b_hex_to_7seg|Seg[0] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
-Warning (13012): Latch HexTo7Segment:b_hex_to_7seg|Seg[1] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[1] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
-Warning (13012): Latch HexTo7Segment:b_hex_to_7seg|Seg[2] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[2] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
-Warning (13012): Latch HexTo7Segment:b_hex_to_7seg|Seg[3] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[3] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
-Warning (13012): Latch HexTo7Segment:b_hex_to_7seg|Seg[4] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
-Warning (13012): Latch HexTo7Segment:b_hex_to_7seg|Seg[5] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
-Warning (13012): Latch HexTo7Segment:b_hex_to_7seg|Seg[6] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
-Warning (13012): Latch HexTo7Segment:a_hex_to_7seg|Seg[0] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal a[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 3
-Warning (13012): Latch HexTo7Segment:a_hex_to_7seg|Seg[1] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal a[1] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 3
-Warning (13012): Latch HexTo7Segment:a_hex_to_7seg|Seg[2] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal a[2] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 3
-Warning (13012): Latch HexTo7Segment:a_hex_to_7seg|Seg[3] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal a[3] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 3
-Warning (13012): Latch HexTo7Segment:a_hex_to_7seg|Seg[4] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal a[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 3
-Warning (13012): Latch HexTo7Segment:a_hex_to_7seg|Seg[5] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal a[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 3
-Warning (13012): Latch HexTo7Segment:a_hex_to_7seg|Seg[6] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal a[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 3
+Info (12128): Elaborating entity "HexTo7Segment" for hierarchy "HexTo7Segment:D1" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 21
+Warning (10240): Verilog HDL Always Construct warning at HexTo7Segment.v(31): inferring latch(es) for variable "HEX5", which holds its previous value in one or more paths through the always construct File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at HexTo7Segment.v(31): inferring latch(es) for variable "HEX4", which holds its previous value in one or more paths through the always construct File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at HexTo7Segment.v(31): inferring latch(es) for variable "HEX3", which holds its previous value in one or more paths through the always construct File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at HexTo7Segment.v(31): inferring latch(es) for variable "HEX2", which holds its previous value in one or more paths through the always construct File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX2[0]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX2[1]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX2[2]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX2[3]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX2[4]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX2[5]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX2[6]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX3[0]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX3[1]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX3[2]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX3[3]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX3[4]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX3[5]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX3[6]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX4[0]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX4[1]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX4[2]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX4[3]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX4[4]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX4[5]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX4[6]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX5[0]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX5[1]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX5[2]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX5[3]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX5[4]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX5[5]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (10041): Inferred latch for "HEX5[6]" at HexTo7Segment.v(31) File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "HexTo7Segment:D1|HEX4[6]" merged with LATCH primitive "HexTo7Segment:D1|HEX5[6]" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+    Info (13026): Duplicate LATCH primitive "HexTo7Segment:D1|HEX4[3]" merged with LATCH primitive "HexTo7Segment:D1|HEX5[6]" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+    Info (13026): Duplicate LATCH primitive "HexTo7Segment:D1|HEX4[0]" merged with LATCH primitive "HexTo7Segment:D1|HEX5[6]" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+    Info (13026): Duplicate LATCH primitive "HexTo7Segment:D1|HEX3[6]" merged with LATCH primitive "HexTo7Segment:D1|HEX3[0]" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+    Info (13026): Duplicate LATCH primitive "HexTo7Segment:D1|HEX3[3]" merged with LATCH primitive "HexTo7Segment:D1|HEX3[0]" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+    Info (13026): Duplicate LATCH primitive "HexTo7Segment:D1|HEX2[6]" merged with LATCH primitive "HexTo7Segment:D1|HEX3[0]" File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+Warning (13012): Latch HexTo7Segment:D1|HEX5[6] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal button[1] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
+Warning (13012): Latch HexTo7Segment:D1|HEX3[0] has unsafe behavior File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HexTo7Segment.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal button[0] File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 4
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 6
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 6
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 6
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 6
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 6
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 6
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 7
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 7
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 7
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 7
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 8
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 8
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 8
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 8
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 9
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 9
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 9
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 9
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 9
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: E:/leeds/5566/workspace/ELEC5566M-Unit3-BaiyanHuo/3-1-HardwareAdder/HardwareAdder.v Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4897 megabytes
-    Info: Processing ended: Sun May 07 02:38:14 2023
+Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 11 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Sun May 07 19:16:27 2023
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:17
 
